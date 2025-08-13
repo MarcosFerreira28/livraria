@@ -9,13 +9,11 @@ export default function GeneroLoader({ params }: LoaderFunctionArgs) {
         throw new Response("Gênero não encontrado", { status: 404 });
     }
     
-    // Decodifica o parâmetro da URL (para lidar com espaços e caracteres especiais)
-    const generoDecodificado = decodeURIComponent(genero);
+    const generoDecodificado = decodeURIComponent(genero); //pega o genero da url
     
-    // Filtra os livros pelo gênero específico
     const livrosDoGenero = livros.livros.filter((livro: Livro) => 
         livro.genero.toLowerCase() === generoDecodificado.toLowerCase()
-    );
+    ); //pega os livros do genero da url
     
     if (livrosDoGenero.length === 0) {
         throw new Response("Nenhum livro encontrado para este gênero", { status: 404 });
