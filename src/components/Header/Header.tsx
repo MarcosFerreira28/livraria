@@ -1,0 +1,18 @@
+import styles from './styles.module.css';
+import LogoImg from "../../assets/Logo.png";
+import ProfileImg from "../../assets/Profile.png";
+import CartImg from "../../assets/Cart.png";
+import { Link } from 'react-router-dom';
+
+export default function Header() {
+    return (
+        <header className={styles.header}>
+            <img className={styles.logo} src={LogoImg} alt="Logo" />
+            {/* adicionar link to */}
+            <div className={styles.icons}>
+                <img src={ProfileImg} alt="Profile" />
+                <img src={CartImg} alt="Cart" />
+            </div>
+        </header>
+    )
+}
