@@ -26,6 +26,38 @@
     color: #090937;
 }
 
+.input {
+    width: 800px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background: #F4F4FF url('../../assets/Search.png') no-repeat;
+    background-position: 20px center;
+    padding-left: 50px;
+    
+    margin-left: 50%;
+    margin-bottom: 45px;
+    transform: translateX(-50%);
+
+    font-family: Manrope;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #09093766;
+}
+
+.input::placeholder {
+    color: #09093766;
+}
+
+.naoEncontrado {
+    text-align: center;
+    padding: 40px;
+}
+
 .gridLivros {
     display: grid;
     justify-items: center;
@@ -35,14 +67,14 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {   
+@media (max-width: 768px) {       
     .gridLivros {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 15px;
     }
 }
 
-@media (max-width: 480px) {    
+@media (max-width: 480px) {  
     .gridLivros {
         grid-template-columns: 1fr;
         gap: 15px;
