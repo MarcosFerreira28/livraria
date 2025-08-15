@@ -10,8 +10,10 @@ export default function Home () {
 
     return (
         <div className={styles.home}>
-            <img className={styles.imagemBanner} src={banner} alt="" />
-            <p className={styles.textoBanner}><span style={{ color: "#F0B861", fontWeight: 800 }}>25% de desconto</span> nos livros do Paulo Coelho!</p>
+            <div className={styles.bannerContainer}>
+                <img className={styles.imagemBanner} src={banner} alt="" />
+                <p className={styles.textoBanner}><span style={{ color: "#F0B861", fontWeight: 800 }}>25% de desconto</span> nos livros do Paulo Coelho!</p>
+            </div>
             {Object.entries(livrosPorGenero).map(([genero, livrosDoGenero]) => (
                 <LivrosPorGenero 
                     key={genero}

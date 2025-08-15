@@ -4,13 +4,20 @@
     align-items: center;
 }
 
-.imagemBanner {
+.bannerContainer {
+    position: relative;
     width: 1320px;
     height: 400px;
+    margin-bottom: 92px;
+}
+
+.imagemBanner {
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
     border-width: 1px;
-    margin-bottom: 92px;
-    position: relative;
+    display: block;
+    object-fit: cover;
 }
 
 .textoBanner {
@@ -18,9 +25,11 @@
     height: 228px;
 
     position: absolute;
-    top: 246px;
-    left: 120px;
-
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    
+    
     font-family: Manrope;
     font-weight: 600;
     font-size: 56px;
