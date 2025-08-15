@@ -1,0 +1,70 @@
+.container {
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.titulo {
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 24px;
+    color: #090937;
+}
+
+.gridLivros {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .gridLivros {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 15px;
+    }
+    
+    .header {
+        margin-bottom: 30px;
+    }
+    
+    .titulo {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .gridLivros {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .titulo {
+        font-size: 24px;
+    }
+}

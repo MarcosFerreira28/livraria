@@ -1,5 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import type { Livro } from "../../Types/Livro";
+import arrow from "../../assets/arrow.png";
+import LivrosDoGenero from "../../components/LivrosDoGenero/LivrosDoGenero";
+import styles from './styles.module.css';
 
 type GeneroPageData = {
     genero: string;
@@ -10,18 +13,17 @@ export default function Genero() {
     const { genero, livros } = useLoaderData() as GeneroPageData;
 
     return (
-        <>
-            <div>
-                <h1>Gênero: {genero}</h1>
-                <p>Total de livros: {livros.length}</p>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <Link to="/generos"><img src={arrow} alt="Voltar" className={styles.arrow} /></Link>
+                <h1 className={styles.titulo}>{genero}</h1>
             </div>
 
-            <div>
+            <div className={styles.gridLivros}>
                 {livros.map((livro: Livro) => (
-                    <div key={livro.id}>
-                    </div>
+                    <LivrosDoGenero key={livro.id} livrosDoGenero={livro} />
                 ))}
             </div>
-        </>
+        </div>
     )
 }
