@@ -19,7 +19,7 @@ export default function LivrosPorGenero({ genero, livrosDoGenero }: LivrosPorGen
                     <div className={styles.containerLivro} key={livro.id}>
                         <img className={styles.imagem} src={livro.capa} alt="imagem da capa do livro" />
                         <div className={styles.containerInfo}>
-                            <div>
+                            <div style={{ overflow: "auto" }}>
                                 <h3 className={styles.titulo}>{livro.titulo}</h3>
                                 <p className={styles.autor}>{livro.autor}</p>
                             </div>

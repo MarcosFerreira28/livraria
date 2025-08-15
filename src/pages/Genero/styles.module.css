@@ -35,36 +35,16 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
+@media (max-width: 768px) {   
     .gridLivros {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 15px;
     }
-    
-    .header {
-        margin-bottom: 30px;
-    }
-    
-    .titulo {
-        font-size: 28px;
-    }
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-    
+@media (max-width: 480px) {    
     .gridLivros {
         grid-template-columns: 1fr;
         gap: 15px;
-    }
-    
-    .titulo {
-        font-size: 24px;
     }
 }

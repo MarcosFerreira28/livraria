@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     //     element: <Login />,
     // },
     {
-        path: "/",
+        path: "/genero",
         element: <RootLayout />,
         children: [
             {
