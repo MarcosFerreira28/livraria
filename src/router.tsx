@@ -3,6 +3,8 @@ import RootLayout from "./RootLayout";
 import Home from "./pages/Home/Home";
 import GeneroLoader from "./Functions/GeneroLoader";
 import Genero from "./pages/Genero/Genero";
+import Detalhes from "./pages/Detalhes/Detalhes";
+import DetalhesLoader from "./Functions/DetalhesLoader";
 
 const router = createBrowserRouter([
     // {
@@ -21,6 +23,11 @@ const router = createBrowserRouter([
                 path: "/generos/:genero",
                 element: <Genero />,
                 loader: GeneroLoader
+            },
+            {
+                path: "/generos/:genero/:livroId",
+                element: <Detalhes />,
+                loader: DetalhesLoader
             }
         ]
     }
