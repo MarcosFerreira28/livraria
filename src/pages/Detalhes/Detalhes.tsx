@@ -31,8 +31,8 @@ export default function Detalhes() {
                 </div>
             </div>
 
-            <button>
-                <p>{detalhes.preco}</p>
+            <button className={styles.botao}>
+                <p id="preco">{detalhes.preco}</p>
                 <p>Adicionar ao carrinho</p>
             </button>
         </div>
