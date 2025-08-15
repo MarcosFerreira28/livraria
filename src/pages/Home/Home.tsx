@@ -15,11 +15,13 @@ export default function Home () {
                 <p className={styles.textoBanner}><span style={{ color: "#F0B861", fontWeight: 800 }}>25% de desconto</span> nos livros do Paulo Coelho!</p>
             </div>
             {Object.entries(livrosPorGenero).map(([genero, livrosDoGenero]) => (
+                
                 <LivrosPorGenero 
                     key={genero}
                     genero={genero}
                     livrosDoGenero={livrosDoGenero as Livro[]}
                 />
+                
             ))}
         </div>
     )

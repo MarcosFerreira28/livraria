@@ -54,7 +54,8 @@
     align-items: center;
 
     background: #F4F4FF;
-    border: 1px solid #0909371A
+    border: 1px solid #0909371A;
+    text-decoration: none;
 }
 
 

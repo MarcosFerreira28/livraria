@@ -16,7 +16,7 @@ export default function LivrosPorGenero({ genero, livrosDoGenero }: LivrosPorGen
             </div>
             <div className={styles.containerLivros}>
                 {(livrosDoGenero as Livro[]).slice(0, 4).map((livro: Livro) => (
-                    <div className={styles.containerLivro} key={livro.id}>
+                    <Link to={`/generos/${livro.genero}/${livro.id}`} className={styles.containerLivro} key={livro.id}>
                         <img className={styles.imagem} src={livro.capa} alt="imagem da capa do livro" />
                         <div className={styles.containerInfo}>
                             <div style={{ overflow: "auto" }}>
@@ -25,7 +25,7 @@ export default function LivrosPorGenero({ genero, livrosDoGenero }: LivrosPorGen
                             </div>
                             <span className={styles.preco}>R$ {livro.preco.toFixed(2)}</span>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
