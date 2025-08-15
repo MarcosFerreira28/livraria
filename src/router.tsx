@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     //     element: <Login />,
     // },
     {
-        path: "/genero",
+        path: "/generos",
         element: <RootLayout />,
         children: [
             {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/genero/:genero",
+                path: "/generos/:genero",
                 element: <Genero />,
                 loader: GeneroLoader
             }

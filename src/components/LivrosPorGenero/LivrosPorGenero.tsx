@@ -12,7 +12,7 @@ export default function LivrosPorGenero({ genero, livrosDoGenero }: LivrosPorGen
         <div className={styles.container}>
             <div className={styles.tituloContainer}>
                 <h2 className={styles.genero}>{genero}</h2>
-                <Link to={`/genero/${genero}`}><button className={styles.verMais}>Ver mais</button></Link>
+                <Link to={`/generos/${genero}`}><button className={styles.verMais}>Ver mais</button></Link>
             </div>
             <div className={styles.containerLivros}>
                 {(livrosDoGenero as Livro[]).slice(0, 4).map((livro: Livro) => (

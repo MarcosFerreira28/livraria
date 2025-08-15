@@ -15,7 +15,7 @@ export default function Genero() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <Link to="/genero" style={{height: "20px"}}><img src={arrow} alt="Voltar" className={styles.arrow} /></Link>
+                <Link to="/generos" style={{height: "20px"}}><img src={arrow} alt="Voltar" className={styles.arrow} /></Link>
                 <h1 className={styles.titulo}>{genero}</h1>
             </div>
 

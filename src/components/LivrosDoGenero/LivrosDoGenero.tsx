@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import type { Livro } from '../../Types/Livro';
 import styles from './styles.module.css';
 
