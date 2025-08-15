@@ -31,10 +31,12 @@ export default function Detalhes() {
                 </div>
             </div>
 
-            <button className={styles.botao}>
-                <p id="preco">{detalhes.preco}</p>
-                <p>Adicionar ao carrinho</p>
-            </button>
+            <div className={styles.buttonContainer}>
+                <button className={styles.botao}>
+                    <p id="preco">R$ {detalhes.preco.toFixed(2)}</p>
+                    <p>Adicionar ao carrinho</p>
+                </button>
+            </div>
         </div>
     )
 }
