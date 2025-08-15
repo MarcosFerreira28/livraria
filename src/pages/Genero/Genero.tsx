@@ -29,10 +29,10 @@ export default function Genero() {
                 className={styles.input}
             />
 
-            <div className={styles.header}>
-                <Link to="/generos" style={{height: "20px"}}><img src={arrow} alt="Voltar" className={styles.arrow} /></Link>
+            <Link to="/generos" style={{height: "20px"}} className={styles.header}>
+                <img src={arrow} alt="Voltar" className={styles.arrow} />
                 <h1 className={styles.titulo}>{genero}</h1>
-            </div>
+            </Link>
 
             <div className={styles.gridLivros}>
                 {livrosFiltrados.map((livro: Livro) => (
