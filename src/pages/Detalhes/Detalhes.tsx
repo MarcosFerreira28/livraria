@@ -8,12 +8,11 @@ export default function Detalhes() {
 
     return (
         <div style={{margin: 'auto', maxWidth: '1320px'}}>
-            <div className={styles.header}>
-                <Link to={`/generos/${detalhes.genero}`} style={{ height: "20px" }}>
-                    <img src={arrow} alt="Voltar" className={styles.arrow} />
-                </Link>
+
+            <Link to={`/generos`} className={styles.header}>
+                <img src={arrow} alt="Voltar" className={styles.arrow} />
                 <h1 className={styles.titulo}>Detalhes do livro</h1>
-            </div>
+            </Link>
 
             <div className={styles.container}>
                 <div className={styles.imagemLivro}>
