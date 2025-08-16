@@ -25,3 +25,17 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.formContainer h1 {
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 32px;
+    color: #090937;
+}
+
+.formContainer p {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 24px;
+    color: #09093799;
+}
