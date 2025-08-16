@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 import { useNavigate } from "react-router-dom";
 
 export default function FormLogin() {
-    const {register, handleSubmit, reset, formState: {errors, isSubmitting}, setError} = useForm<User>({
+    const {register, handleSubmit, reset, formState: {errors, isSubmitting}} = useForm<User>({
         resolver: zodResolver(userSchema)
     });
 

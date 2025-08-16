@@ -1,19 +1,20 @@
 import type { LoaderFunctionArgs } from "react-router-dom";
-import livros from '../livros.json';
-import type { Livro } from '../Types/Livro';
+import axios from "axios";
 
-export default function DetalhesLoader({ params } : LoaderFunctionArgs) {
+export default async function DetalhesLoader({ params } : LoaderFunctionArgs) {
     const { livroId } = params;
 
     if (!livroId) {
         throw new Response("Livro não encontrado", { status: 404 });
     }
 
-    const detalhes = livros.livros.find((livro: Livro) => livro.id === Number(livroId));
+    try {
+        const response = await axios.get(`http://localhost:3001/livros/${livroId}`);
+        const livro = response.data;
 
-    if (!detalhes) {
-        throw new Response("Livro não encontrado", { status: 404 });
+        return livro;
+        
+    } catch (error) {
+        throw new Response("Erro ao buscar livro", { status: 500 });
     }
-
-    return detalhes;
 }
