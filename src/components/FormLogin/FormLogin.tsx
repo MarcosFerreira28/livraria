@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod/src/index.js";
 import { useForm } from "react-hook-form"
 import type { User } from "../../Types/Users";
-import userSchema from "../../Types/Users";
+import userSchema from "../../Variables/UserSchema";
 import styles from './styles.module.css';
 
 export default function FormLogin() {
