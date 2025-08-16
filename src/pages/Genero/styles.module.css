@@ -1,12 +1,12 @@
 .container {
-    max-width: 1320px;
+    width: 96.6vw;
     margin: auto;
     display: flex;
     flex-direction: column;
 }
 
 .header {
-    height: 4vh;
+    height: 3.3vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,8 +16,8 @@
 }
 
 .arrow {
-    width: 2vw;
-    height: 4vh;
+    width: 1.5vw;
+    height: 3.3vh;
     cursor: pointer;
 }
 
@@ -29,8 +29,8 @@
 }
 
 .input {
-    width: 55vw;
-    height: 7vh;
+    width: 58vw;
+    height: 8.3vh;
     border: none;
     border-radius: 4px;
     background: #F4F4FF url('../../assets/Search.png') no-repeat;
