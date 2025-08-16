@@ -1,6 +1,6 @@
 .containerLivro {
-    width: 300px;
-    height: 433px;
+    width: 20vw;
+    height: 65vh;
     border-radius: 4px;
     border-width: 1px;
     gap: 20px;
@@ -15,15 +15,15 @@
 
 
 .imagem {
-    width: 200px;
-    height: 300px;
+    width: 13vw;
+    height: 46vh;
     border-radius: 4px;
     box-shadow: 0px 4px 8px 0px #6251DD33;
 }
 
 .containerInfo {
-    width: 260px;
-    height: 73px;
+    width: 17vw;
+    height: 8vh;
 
     padding-top: 10px;
     padding-bottom: 10px;
