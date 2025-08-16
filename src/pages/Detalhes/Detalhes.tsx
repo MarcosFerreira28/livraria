@@ -2,9 +2,12 @@ import { Link, useLoaderData } from "react-router-dom";
 import type { Livro } from "../../Types/Livro";
 import styles from "./styles.module.css";
 import arrow from "../../assets/arrow.png";
+import useCartStore from "../../stores/CartStore";
 
 export default function Detalhes() {
     const detalhes = useLoaderData() as Livro;
+
+    const addToCart = useCartStore((state) => state.addToCart);
 
     return (
         <div style={{margin: 'auto', maxWidth: '1320px'}}>
@@ -31,7 +34,13 @@ export default function Detalhes() {
             </div>
 
             <div className={styles.buttonContainer}>
-                <button className={styles.botao}>
+                <button 
+                    className={styles.botao} 
+                    onClick={() => {
+                        addToCart(detalhes);
+                        alert("Livro adicionado ao Carrinho!");
+                    }}
+                >
                     <p id="preco">R$ {detalhes.preco.toFixed(2)}</p>
                     <p>Adicionar ao carrinho</p>
                 </button>

@@ -10,7 +10,7 @@ export default function Header() {
             <Link to={"/generos"}><img className={styles.logo} src={LogoImg} alt="Logo" /></Link>
             <div className={styles.icons}>
                 <img src={ProfileImg} alt="Profile" />
-                <img src={CartImg} alt="Cart" />
+                <Link to={"/generos/cart"}><img src={CartImg} alt="Cart" /></Link>
             </div>
         </header>
     )

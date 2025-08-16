@@ -6,6 +6,7 @@ import Genero from "./pages/Genero/Genero";
 import Detalhes from "./pages/Detalhes/Detalhes";
 import DetalhesLoader from "./Functions/DetalhesLoader";
 import Login from "./pages/Login/Login";
+import Cart from "./pages/Cart/Cart";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
                 path: "/generos/:genero/:livroId",
                 element: <Detalhes />,
                 loader: DetalhesLoader
+            },
+            {
+                path: "/generos/cart",
+                element: <Cart/>
             }
         ]
     }
