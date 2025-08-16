@@ -5,12 +5,13 @@ import GeneroLoader from "./Functions/GeneroLoader";
 import Genero from "./pages/Genero/Genero";
 import Detalhes from "./pages/Detalhes/Detalhes";
 import DetalhesLoader from "./Functions/DetalhesLoader";
+import Login from "./pages/Login/Login";
 
 const router = createBrowserRouter([
-    // {
-    //     path: "/",
-    //     element: <Login />,
-    // },
+    {
+        path: "/",
+        element: <Login />,
+    },
     {
         path: "/generos",
         element: <RootLayout />,

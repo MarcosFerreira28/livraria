@@ -3,16 +3,20 @@ import { useForm } from "react-hook-form"
 import type { User } from "../../Types/Users";
 import userSchema from "../../Variables/UserSchema";
 import styles from './styles.module.css';
+import { useNavigate } from "react-router-dom";
 
 export default function FormLogin() {
     const {register, handleSubmit, reset, formState: {errors, isSubmitting}, setError} = useForm<User>({
         resolver: zodResolver(userSchema)
     });
 
+    const navigate = useNavigate();
+
     async function createUser(data : User){
         await new Promise(resolve => setTimeout(resolve, 2000));
         console.log(data);
         reset();
+        navigate("/generos");
     }
 
     return (
