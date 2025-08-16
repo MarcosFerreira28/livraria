@@ -1,5 +1,5 @@
 .header {
-    height: 120px;
+    height: 20vh;
     background: #FFFFFF;
     display: flex;
     flex-direction: row;
@@ -10,11 +10,16 @@
 }
 
 .logo {
-    width: 60px;
-    height: 39px;
+    width: 4.4vw;
+    height: 6.5vh;
 }
 
 .icons {
     display: flex;
     gap: 16px;
+}
+
+.icons img{
+    width: 3.65vw;
+    height: 8.34vh;
 }
