@@ -6,8 +6,8 @@
 
 .bannerContainer {
     position: relative;
-    width: 1320px;
-    height: 400px;
+    width: 96.6vw;
+    height: 66.7vh;
     margin-bottom: 92px;
 }
 
@@ -21,15 +21,17 @@
 }
 
 .textoBanner {
-    width: 494px;
-    height: 228px;
+    width: 36.1vw;
+    height: 38vh;
 
     position: absolute;
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
     
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: Manrope;
     font-weight: 600;
     font-size: 56px;
