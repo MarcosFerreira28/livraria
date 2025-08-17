@@ -1,0 +1,69 @@
+.cartContainer {
+	width: 65.8vw;
+	margin: 40px auto;
+	background: #F4F4FF;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px 0 #6251DD22;
+	padding: 40px 32px 32px 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.cartTitle {
+	font-family: Manrope;
+	font-size: 32px;
+	font-weight: 700;
+	color: #090937;
+	text-align: center;
+}
+
+.cartList {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.cartItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px 0 #6251DD11;
+	padding: 18px 24px;
+	font-family: Manrope;
+	font-size: 20px;
+	color: #090937;
+}
+
+.cartItem span {
+	font-size: 20px;
+	color: #090937;
+}
+
+.removeButton {
+	background: #EF6B4A;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 18px;
+	font-size: 16px;
+	font-family: Manrope;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.removeButton:hover {
+	background: #d95c3d;
+    transform: scale(1.10);
+    transition: 0.5s ease-in-out;
+}
+
+.cartTotal {
+	font-family: Manrope;
+	font-size: 24px;
+	font-weight: 700;
+	color: #6251DD;
+	text-align: right;
+}
