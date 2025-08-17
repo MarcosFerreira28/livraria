@@ -1,0 +1,71 @@
+.containerLivro {
+    width: 22vw;
+    height: 72vh;
+    border-radius: 4px;
+    border-width: 1px;
+    gap: 20px;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F4F4FF;
+    border: 1px solid #0909371A;
+    transition: 0.5s ease-in-out;
+}
+
+.containerLivro:hover{
+    transform: scale(1.05);
+}
+
+
+.imagem {
+    width: 14.6vw;
+    height: 50vh;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px 0px #6251DD33;
+}
+
+.containerInfo {
+    width: 19vw;
+    height: 12vh;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.titulo {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 20px;
+    color: #090937;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autor {
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 16px;
+    color: #09093799;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.preco {
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 24px;
+    color: #6251DD;
+    white-space: nowrap;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+}

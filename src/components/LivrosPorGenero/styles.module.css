@@ -1,7 +1,7 @@
 
 .container {
-    width: 1340px;
-    height: 264px;
+    width: 98.1vw;
+    height: 44vh;
     border-width: 1px;
     display: flex;
     flex-direction: column;
@@ -11,8 +11,8 @@
 
 
 .tituloContainer {
-    width: 1320px;
-    height: 44px;
+    width: 96.6vw;
+    height: 7.34vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,8 +42,8 @@
 }
 
 .containerLivro {
-    width: 320px;
-    height: 200px;
+    width: 23.4vw;
+    height: 33.4vh;
     gap: 20px;
     border-radius: 4px;
     border-width: 1px;
@@ -54,20 +54,26 @@
     align-items: center;
 
     background: #F4F4FF;
-    border: 1px solid #0909371A
+    border: 1px solid #0909371A;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.containerLivro:hover{
+    transform: scale(1.05);
 }
 
 
 .imagem {
-    width: 120px;
-    height: 180px;
+    width: 8.8vw;
+    height: 30vh;
     border-radius: 4px;
     box-shadow: 0px 4px 8px 0px #6251DD33;
 }
 
 .containerInfo {
-    width: 105px;
-    height: 180px;
+    width: 11.3vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,6 +87,7 @@
     font-weight: 600;
     font-size: 20px;
     color: #090937;
+    
 }
 
 .autor {

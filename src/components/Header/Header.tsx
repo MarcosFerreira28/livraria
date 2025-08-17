@@ -7,11 +7,10 @@ import { Link } from 'react-router-dom';
 export default function Header() {
     return (
         <header className={styles.header}>
-            <img className={styles.logo} src={LogoImg} alt="Logo" />
-            {/* adicionar link to */}
+            <Link to={"/generos"}><img className={styles.logo} src={LogoImg} alt="Logo" /></Link>
             <div className={styles.icons}>
                 <img src={ProfileImg} alt="Profile" />
-                <img src={CartImg} alt="Cart" />
+                <Link to={"/generos/cart"}><img src={CartImg} alt="Cart" className={styles.cart} /></Link>
             </div>
         </header>
     )
