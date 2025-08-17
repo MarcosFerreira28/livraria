@@ -5,8 +5,6 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-
-      {/* COLOCAR HOVERS  */}
     </>
   )
 }

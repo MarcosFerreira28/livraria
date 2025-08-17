@@ -102,6 +102,13 @@
     border-radius: 4px;
     background: #EF6B4A;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.botao:hover {
+    background: #d95f3c;
+    transform: scale(1.05);
 }
 
 .botao p {

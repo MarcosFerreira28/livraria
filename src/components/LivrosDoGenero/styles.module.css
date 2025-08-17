@@ -10,7 +10,12 @@
     flex-direction: column;
     align-items: center;
     background: #F4F4FF;
-    border: 1px solid #0909371A
+    border: 1px solid #0909371A;
+    transition: 0.5s ease-in-out;
+}
+
+.containerLivro:hover{
+    transform: scale(1.05);
 }
 
 

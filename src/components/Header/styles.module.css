@@ -12,6 +12,11 @@
 .logo {
     width: 4.4vw;
     height: 6.5vh;
+    transition: 0.5s ease-in-out;
+}
+
+.logo:hover{
+    transform: rotateY(180deg);
 }
 
 .icons {
@@ -22,4 +27,12 @@
 .icons img{
     width: 3.65vw;
     height: 8.34vh;
+}
+
+.cart{
+    transition: 0.5s ease-in-out;
+}
+
+.cart:hover {
+    transform: scale(1.15);
 }
