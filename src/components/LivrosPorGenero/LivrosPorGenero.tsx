@@ -12,11 +12,11 @@ export default function LivrosPorGenero({ genero, livrosDoGenero }: LivrosPorGen
         <div className={styles.container}>
             <div className={styles.tituloContainer}>
                 <h2 className={styles.genero}>{genero}</h2>
-                <Link to={`/generos/${genero}`}><button className={styles.verMais}>Ver mais</button></Link>
+                <Link to={`/${genero}`}><button className={styles.verMais}>Ver mais</button></Link>
             </div>
             <div className={styles.containerLivros}>
                 {(livrosDoGenero as Livro[]).slice(0, 4).map((livro: Livro) => (
-                    <Link to={`/generos/${livro.genero}/${livro.id}`} className={styles.containerLivro} key={livro.id}>
+                    <Link to={`/${livro.genero}/${livro.id}`} className={styles.containerLivro} key={livro.id}>
                         <img className={styles.imagem} src={livro.capa} alt="imagem da capa do livro" />
                         <div className={styles.containerInfo}>
                             <div style={{ overflow: "auto" }}>

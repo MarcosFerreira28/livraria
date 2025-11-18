@@ -4,6 +4,7 @@ import type { User } from "../../Types/Users";
 import userSchema from "../../Variables/UserSchema";
 import styles from './styles.module.css';
 import { useNavigate } from "react-router-dom";
+import useUserStore from "../../stores/UserStore";
 
 export default function FormLogin() {
     const {register, handleSubmit, reset, formState: {errors, isSubmitting}} = useForm<User>({
@@ -12,11 +13,13 @@ export default function FormLogin() {
 
     const navigate = useNavigate();
 
+    const login = useUserStore((state) => state.login);
+
     async function createUser(data : User){
         await new Promise(resolve => setTimeout(resolve, 2000));
-        console.log(data);
+        login(data);
         reset();
-        navigate("/generos");
+        navigate("/");
     }
 
     return (
@@ -45,7 +48,7 @@ export default function FormLogin() {
 
             <div className={styles.buttons}>
                 <button className={styles.entrar} disabled={isSubmitting}>{isSubmitting ? "Carregando..." : "Entrar"}</button>
-                <button className={styles.cadastrar}>Cadastre-se</button>
+                <button className={styles.cadastrar} disabled >Cadastre-se</button>
             </div>
         </form>
     )

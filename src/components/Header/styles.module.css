@@ -29,6 +29,14 @@
     height: 8.34vh;
 }
 
+.profile{
+    transition: 0.5s ease-in-out;
+}
+
+.profile:hover{
+    transform: scale(1.15);
+}
+
 .cart{
     transition: 0.5s ease-in-out;
 }

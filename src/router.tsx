@@ -8,13 +8,16 @@ import DetalhesLoader from "./Functions/DetalhesLoader";
 import Login from "./pages/Login/Login";
 import Cart from "./pages/Cart/Cart";
 
+/*
+    Alteração: coloquei `RootLayout` na rota raiz (`/`) para que a Home seja
+    pública e acessível em `/` e também em `/generos` (mantive o caminho `/generos`
+    porque há links no projeto que apontam para ele). A rota de login foi movida
+    para `/login`.
+*/
+
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Login />,
-    },
-    {
-        path: "/generos",
         element: <RootLayout />,
         children: [
             {
@@ -22,22 +25,25 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/generos/:genero",
+                path: "/:genero",
                 element: <Genero />,
                 loader: GeneroLoader
             },
             {
-                path: "/generos/:genero/:livroId",
+                path: "/:genero/:livroId",
                 element: <Detalhes />,
                 loader: DetalhesLoader
             },
             {
-                path: "/generos/cart",
-                element: <Cart/>
+                path: "/cart",
+                element: <Cart />
             }
         ]
+    },
+    {
+        path: "/login",
+        element: <Login />
     }
-])
-
+]);
 
 export default router;

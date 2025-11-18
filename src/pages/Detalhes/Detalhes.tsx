@@ -1,18 +1,21 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import type { Livro } from "../../Types/Livro";
 import styles from "./styles.module.css";
 import arrow from "../../assets/arrow.png";
 import useCartStore from "../../stores/CartStore";
+import useUserStore from "../../stores/UserStore";
 
 export default function Detalhes() {
     const detalhes = useLoaderData() as Livro;
 
     const addToCart = useCartStore((state) => state.addToCart);
+    const isLogged = useUserStore((state) => state.isLogged);
+    const navigate = useNavigate();
 
     return (
         <div style={{margin: 'auto', maxWidth: '1320px'}}>
 
-            <Link to={`/generos`} className={styles.header}>
+            <Link to={`/`} className={styles.header}>
                 <img src={arrow} alt="Voltar" className={styles.arrow} />
                 <h1 className={styles.titulo}>Detalhes do livro</h1>
             </Link>
@@ -37,6 +40,13 @@ export default function Detalhes() {
                 <button 
                     className={styles.botao} 
                     onClick={() => {
+                        if (!isLogged) {
+                            const goToLogin = confirm("Você precisa fazer login para adicionar ao carrinho. Deseja fazer login agora?");
+                            if (goToLogin) {
+                                navigate('/login');
+                            }
+                            return;
+                        }
                         addToCart(detalhes);
                         alert("Livro adicionado ao Carrinho!");
                     }}

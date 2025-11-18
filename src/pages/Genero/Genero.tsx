@@ -29,14 +29,14 @@ export default function Genero() {
                 className={styles.input}
             />
 
-            <Link to="/generos" className={styles.header}>
+            <Link to="/" className={styles.header}>
                 <img src={arrow} alt="Voltar" className={styles.arrow} />
                 <h1 className={styles.titulo}>{genero}</h1>
             </Link>
 
             <div className={styles.gridLivros}>
                 {livrosFiltrados.map((livro: Livro) => (
-                    <Link to={`/generos/${genero}/${livro.id}`} key={livro.id} style={{textDecoration: 'none'}}>
+                    <Link to={`//${genero}/${livro.id}`} key={livro.id} style={{textDecoration: 'none'}}>
                         <LivrosDoGenero livrosDoGenero={livro} />
                     </Link>
                 ))}
