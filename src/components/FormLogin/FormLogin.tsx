@@ -1,5 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod/src/index.js";
 import { useForm } from "react-hook-form"
+import axios from 'axios'
+import { useState } from 'react'
 import type { User } from "../../Types/Users";
 import userSchema from "../../Variables/UserSchema";
 import styles from './styles.module.css';
@@ -14,12 +16,26 @@ export default function FormLogin() {
     const navigate = useNavigate();
 
     const login = useUserStore((state) => state.login);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     async function createUser(data : User){
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        login(data);
-        reset();
-        navigate("/");
+        setErrorMessage(null);
+        try {
+            const body = { email: data.email, password: data.senha };
+            const resp = await axios.post('http://localhost:3333/sessions', body, {
+                headers: { 'Content-Type': 'application/json' }
+            });
+
+            const { user, accessToken } = resp.data;
+            // store token locally and update user store
+            // try { localStorage.setItem('accessToken', accessToken); } catch {}
+            login(user);
+            reset();
+            navigate("/");
+        } catch (err: any) {
+            const msg = 'Email ou senha incorreta';
+            setErrorMessage(msg);
+        }
     }
 
     return (
@@ -44,7 +60,10 @@ export default function FormLogin() {
                     />
                     {errors.senha && <span>{errors.senha.message}</span>}
                 </div>
+
+                {errorMessage && <div className={styles.error} role="alert">{errorMessage}</div>}
             </div>
+
 
             <div className={styles.buttons}>
                 <button className={styles.entrar} disabled={isSubmitting}>{isSubmitting ? "Carregando..." : "Entrar"}</button>
