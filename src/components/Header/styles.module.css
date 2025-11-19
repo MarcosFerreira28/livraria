@@ -21,6 +21,8 @@
 
 .icons {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 16px;
 }
 
@@ -42,5 +44,20 @@
 }
 
 .cart:hover {
+    transform: scale(1.15);
+}
+
+.logout {
+    width: 3.65vw;
+    height: 8.34vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s ease-in-out;
+}
+
+.logout:hover{
     transform: scale(1.15);
 }

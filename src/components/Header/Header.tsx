@@ -10,6 +10,8 @@ export default function Header() {
     const isLogged = useUserStore((state) => state.isLogged);
     const logout = useUserStore((state) => state.logout);
 
+    const user = useUserStore((s) => s.user)
+
     function handleLogout() {
         const confirmLogout = confirm("Realmente quer fazer o logout?");
         if (confirmLogout){
@@ -22,12 +24,17 @@ export default function Header() {
             <Link to={"/"}><img className={styles.logo} src={LogoImg} alt="Logo" /></Link>
             <div className={styles.icons}>
                 
-                {/* colcoar um is logged para substituir pelo nome do loggado pegado no backend */}
-                <Link to={"/login"}><img src={ProfileImg} alt="Profile" className={styles.profile}/></Link>
-                <Link to={"/cart"}><img src={CartImg} alt="Cart" className={styles.cart} /></Link>
                 {isLogged ? (
-                    <button className={styles.button} onClick={handleLogout}>Logout</button>
+                    <p>{user.name}</p>
+                ) : <Link to={"/login"}><img src={ProfileImg} alt="Profile" className={styles.profile}/></Link>
+                }
+
+                <Link to={"/cart"}><img src={CartImg} alt="Cart" className={styles.cart} /></Link>
+                
+                {isLogged ? (
+                    <button className={styles.logout} onClick={handleLogout}>Logout</button>
                 ) : null}
+
             </div>
         </header>
     )

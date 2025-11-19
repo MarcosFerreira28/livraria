@@ -27,8 +27,7 @@ export default function FormLogin() {
             });
 
             const { user, accessToken } = resp.data;
-            // store token locally and update user store
-            // try { localStorage.setItem('accessToken', accessToken); } catch {}
+            try { localStorage.setItem('accessToken', accessToken); } catch {}
             login(user);
             reset();
             navigate("/");
