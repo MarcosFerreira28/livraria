@@ -1,4 +1,8 @@
-import z from "zod";
-import userSchema from "../Variables/UserSchema";
+export interface User {
+    email: string;
+    senha: string;
+    name: string;
+}
 
-export type User = z.infer<typeof userSchema>;
+
+

@@ -25,7 +25,7 @@ export default function Header() {
             <div className={styles.icons}>
                 
                 {isLogged ? (
-                    <p>{user.name}</p>
+                    <p>{user?.name}</p>
                 ) : <Link to={"/login"}><img src={ProfileImg} alt="Profile" className={styles.profile}/></Link>
                 }
                 
