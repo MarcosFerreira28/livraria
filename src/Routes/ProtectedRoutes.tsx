@@ -12,9 +12,11 @@ export default function ProtectedRoutes({ children }: Props) {
 
   if (!isLogged) {
     const logar = confirm("voce precisa estar logado para acessar o carrinho, gostaria de loggar?")
-    if(logar) {
-        return <Navigate to="/login" state={{ from: location }} replace />
+    if (logar) {
+      return <Navigate to="/login" state={{ from: location }} replace />
     }
+
+    return <Navigate to="/" replace />
   }
 
   return <>{children}</>

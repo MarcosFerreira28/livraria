@@ -28,7 +28,7 @@ export default function Header() {
                     <p>{user.name}</p>
                 ) : <Link to={"/login"}><img src={ProfileImg} alt="Profile" className={styles.profile}/></Link>
                 }
-
+                
                 <Link to={"/cart"}><img src={CartImg} alt="Cart" className={styles.cart} /></Link>
                 
                 {isLogged ? (
